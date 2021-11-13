@@ -54,7 +54,7 @@ def scale_y(y):
     **y** — y-координата модели.
     """
 
-    return y  # FIXME: not done yet
+    return int(scale_factor*y) + window_height//2
 
 
 def create_star_image(space, star):
@@ -80,7 +80,7 @@ def create_planet_image(space, planet):
     **space** — холст для рисования.
     **planet** — объект планеты.
     """
-    pass  # FIXME: сделать как у звезды
+    create_star_image(space, planet)
 
 
 def update_system_name(space, system_name):
